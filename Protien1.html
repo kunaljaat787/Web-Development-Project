@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protein Supplements</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: Arial, sans-serif;
+      color: #f8fafc;
+      min-height: 100vh;
+    }
+
+    /* Fixed full-screen background stage behind all content */
+    .bg-slideshow {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      background-color: #090d16;
+    }
+
+    .bg-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+    }
+
+    /* Subtle dark overlay so text and cards stay readable */
+    .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.35);
+      pointer-events: none;
+    }
+
+    .page-header {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      padding: 18px 24px;
+      text-align: center;
+      background-color: rgba(15, 23, 42, 0.85);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .page-header h1 {
+      margin: 0;
+      color: #facc15;
+      letter-spacing: 1px;
+    }
+
+    .product-card {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      padding: 24px;
+      text-align: center;
+      background-color: rgba(15, 23, 42, 0.82);
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 360px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .product-title {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #f1f5f9;
+    }
+
+    .mrp {
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .offer-price {
+      color: #4ade80;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      margin-top: 16px;
+      background-color: #28a745;
+      color: #ffffff;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add or remove background images here -->
+  <div class="bg-slideshow" aria-hidden="true">
+    <img class="bg-slide" src="9.jpg" alt="">
+    <img class="bg-slide" src="10.jpg" alt="">
+    <img class="bg-slide" src="11.jpg" alt="">
+    <img class="bg-slide" src="12.webp" alt="">
+    <div class="bg-overlay"></div>
+  </div>
+
+  <header class="page-header">
+    <h1>PROTEIN SUPPLEMENTS</h1>
+  </header>
+
+  <div class="product-card" id="product-1">
+    <img src="1.jpg" alt="Isolate Whey Protein">
+    <h2 class="product-title">Isolate Protein Concentrated | 2kg | Belgium Chocolate Flavoured</h2>
+    <div class="mrp">MRP: <s>₹19,149</s></div>
+    <div class="offer-price">Offer Price: ₹11,999</div>
+    <a href="https://www.avvatarindia.com/product/isorich-protein-belgian-chocolate-flavour-2-kg" target="_blank" rel="noopener noreferrer">
+      <button class="buy-btn">BUY</button>
+    </a>
+  </div>
+
+  <div class="product-card" id="product-2">
+    <img src="2.jpg" alt="Avvatar Whey Protein">
+    <h2 class="product-title">Avvatar Whey Protein | 2kg | Malai Kulfi Flavoured</h2>
+    <div class="mrp">MRP: <s>₹14,449</s></div>
+    <div class="offer-price">Offer Price: ₹10,099</div>
+    <a href="https://www.avvatarindia.com/product/whey-protein-malai-kulfi-flavour-2-kg" target="_blank" rel="noopener noreferrer">
+      <button class="buy-btn">BUY</button>
+    </a>
+  </div>
+
+  <div class="product-card" id="product-3">
+    <img src="3.jpg" alt="Avvatar Fuel Whey Protein">
+    <h2 class="product-title">Avvatar Fuel Whey Protein | 2kg | Malai Kulfi Flavoured</h2>
+    <div class="offer-price">Price: ₹10,399</div>
+    <a href="https://www.avvatarindia.com/product/fuel-whey-malai-kulfi-flavour-2-kg" target="_blank" rel="noopener noreferrer">
+      <button class="buy-btn">BUY</button>
+    </a>
+  </div>
+
+  <div class="product-card" id="product-4">
+    <img src="4.jpg" alt="Avvatar Iso Nitro Whey Protein">
+    <h2 class="product-title">Avvatar Iso Nitro Whey Protein | 2kg | Malai Kulfi Flavoured</h2>
+    <div class="offer-price">Price: ₹7,119</div>
+    <a href="https://www.avvatarindia.com/product/nitro-iso-whey-malai-kulfi-flavour-2-kg" target="_blank" rel="noopener noreferrer">
+      <button class="buy-btn">BUY</button>
+    </a>
+  </div>
+
+  <div class="product-card" id="product-5">
+    <img src="8.jpg" alt="Biozyme Performance Whey">
+    <h2 class="product-title">MuscleBlaze Biozyme Performance Whey | 1kg | Rich Chocolate Flavoured</h2>
+    <div class="mrp">MRP: <s>₹4,999</s></div>
+    <div class="offer-price">Offer Price: ₹4,199</div>
+    <a href="https://www.muscleblaze.com/sv/muscleblaze-biozyme-performance-whey/SP-88093?navKey=VRNT-165145" target="_blank" rel="noopener noreferrer">
+      <button class="buy-btn">BUY</button>
+    </a>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.bg-slide'));
+    let ticking = false;
+
+    function updateSlidePositions() {
+      ticking = false;
+      if (slides.length <= 1) return;
+
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollRatio = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
+
+      // Maps scroll from 0..1 across slide indices 0..(slides.length - 1)
+      const slidePosition = scrollRatio * (slides.length - 1);
+
+      slides.forEach((slide, index) => {
+        const offsetPercent = (index - slidePosition) * 100;
+        slide.style.transform = `translate3d(0, ${offsetPercent}%, 0)`;
+      });
+    }
+
+    function onScrollOrResize() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateSlidePositions);
+      }
+    }
+
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    updateSlidePositions();
+  </script>
+</body>
+</html>
